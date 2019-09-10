@@ -1,0 +1,486 @@
+/* -------------------------------------------*/
+/* BASIC SETUP */
+/*--------------------------------------------*/
+
+
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+
+html{
+    
+    background-color: #fff;
+    color:#555;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+}
+
+.clearfix{zoom:1}
+.clearfix: after{
+    content:'.';
+    clear:both;
+    display:block;
+    height:0;
+    visibility: hidden;
+}
+/* -------------------------------------------*/
+/* REUSABLE COMPONENTS*/
+/*--------------------------------------------*/
+.row{
+    max-width: 1140px;
+    margin:auto;
+    padding:2%;
+}
+
+section{
+    padding:80px 0;
+
+}
+ 
+
+/* -------------------------------------------*/
+/* HEADINGS Group similar properties*/
+/*--------------------------------------------*/
+h1, h2, h3{
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1{
+    
+
+    margin-top:0;
+    margin-bottom: 20px;
+    color:#fff;
+    font-size:240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    
+      
+}
+h2{
+    
+    font-size:180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin:30px;
+    letter-spacing: 1px;
+    
+}
+
+h3{
+    font-size:110%;
+    line-height: 200%;
+    
+}
+/******putting contents directly from css with the after pseudo class, e.g putting a block directly on css.*******/
+
+h2:after{
+    display: block;
+    height: 2px;
+    background-color: #d35400;
+    content:"";
+    width: 100px;
+    margin:0 auto;
+    margin-top:30px;
+}
+    
+
+/* -------------------------------------------*/
+/* Whenever we do an after pseudo class, we need to specify the content
+/*--------------------------------------------*/
+
+
+/* -------------------------------------------*/
+/* BUTTONS*/
+/*--------------------------------------------*/
+/*long paragraph, use long copy. To make paragraph a little less wide, set width to 70% and do margin left to 15%  */
+
+.long-copy{
+    line-height:145%;
+    width:70%;
+    margin-left:15%;
+    
+}
+/*use paddings to align boxes, add a box class to your columns in the index file*/
+.box{
+    padding:1%;
+    
+}
+
+.box p{
+    font-size:90%;
+    line-height: 145%;
+}
+
+/*this above is to reduce the font size of the paragraphs without disrupting h1, h2, and h3*/
+
+
+/***********ICONS********/
+/*In order to change icons, define a class for them. Group them all together in the same class and edit in css
+Lesson learnt: you can create a class at the beginning of a link*/
+.icon-big{
+    font-size:300%;
+    display:block;
+    color: #d35400;
+    margin-bottom:10px;
+       
+}
+
+
+
+.btn:link,
+.btn:visited {
+    display:inline-block;
+    padding:10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius:200px;
+    transition:background-color 0.2s, border 0.2s, color 0.2s;
+    
+}
+
+
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #d35400;
+    border:1px solid  #d35400;
+    color:rgb(255,255,255);
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border:1px solid  #d35400;
+    color: #d35400;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #cf6d17;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border:1px solid #cf6d17;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    
+    
+}
+
+
+/* -------------------------------------------*/
+/* HEADER*/
+/*--------------------------------------------*/
+
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/hero.jpg);
+    background-size: cover;
+    background-position:center;
+    height:100vh;
+    background-attachment: fixed;
+    
+}
+
+.hero-text-box{
+    position: absolute;
+    width:1140px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.logo{
+    height:100px;
+    width:auto;
+    float: left;
+    margin-top:20px;
+    
+    
+}
+
+.main-nav{
+    
+float:right;
+list-style:none;
+    margin-top: 55px;
+    
+    
+}
+
+.main-nav li{
+    
+    display:inline-block;
+    margin-left:40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    padding: 8px 0;
+     color:#fff;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-size:90%;  
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+    
+}
+
+
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom:2px solid #e67e22; }
+
+
+/*Features*/
+.section-features .long-copy{
+    margin-bottom: 40px;
+    
+}
+
+/*Meal Showcase*/
+.section-meals{
+    
+    padding:0;
+    margin-bottom:450px;
+    
+}
+.meals-showcase{
+    
+    list-style: none;
+    width:100%;
+    
+}
+
+.meals-showcase li{
+    display:block;
+    float:left;
+    width:25%;
+    
+    
+}
+
+.meals-photo{
+    width:100%;
+    margin:0;
+    overflow:hidden;
+  background-color: #000;
+}
+
+
+.meals-photo img{
+    opacity: 0.7;
+    width:100%;
+    height:auto;
+    transform: scale(1.15);
+    transition: transform 0.5s opacity 0.4s;
+    
+}
+
+.meals-photo img:hover {
+    opacity: 1;
+    transform:scale(1.03);
+    
+}
+
+    
+
+
+
+
+    
+}
+
+/* -------------------------------------------*/
+/* How it works*/
+/*--------------------------------------------*/
+
+
+.section-steps{
+    padding:10px;
+    margin: 50px;
+}
+
+
+.steps-box: first-child{
+    text-align: right;
+    padding-right:3%;
+    margin-top: 30px;
+    
+}
+
+.steps-box:last-child {
+    
+    padding-left: 3%;
+    margin-top:70px;
+}
+
+
+.app-screen{
+    
+    width:40%; 
+    margin-left: 60%;
+    margin-bottom: auto;
+}
+
+
+.works-step{
+    margin-bottom: 50px;
+}
+.works-step: last-of-type{
+    
+    margin-bottom: 80px;
+    
+}
+.works-step div{
+    color: #d35400;
+    border: 2px solid  #d35400;
+    display: inline-block;
+    border-radius:50%;
+    height:55px;
+    width: 55px;
+    text-align: center;
+    padding:5px;
+    float:left;
+    font-size:150%;
+    margin-right: 25px;
+    
+}
+
+
+
+
+
+.btn-app img{
+    height:50px;
+    width:auto;
+    margin-right: 10px;
+    margin-top: 35px;
+}
+
+.section-steps {
+    background-color: #f0ebe6;
+}
+
+
+
+/* -------------------------------------------*
+Cities
+/*--------------------------------------------*/
+
+.section-cities{
+      padding-left:70px;
+      margin-bottom:260px;
+}
+
+.city-features{
+    width:25%;
+    height:5px;
+    display:block;
+    float:left;
+    text-align:justify;
+}
+        
+.city-photo{
+    width:80%;
+}
+
+.link-cities:link,
+.link-cities:visited{
+    color: #d35400; 
+    width:70%;
+    margin-left:6%;
+    text-decoration: none;
+    border-bottom:solid 1px;
+    padding-bottom: .50px;
+ 
+}
+
+
+.link-cities:hover,
+.link-cities:active{
+    color:#555;
+    border-bottom: 1px solid transparent;
+}
+    
+.icon-small{
+    font-size:180%;
+    display: block;
+    float:left;
+    color: #d35400;
+    position: relative;
+    top:5px;
+    left:3px;
+    vertical-align: middle;
+    margin-top: -4px;
+    
+
+ 
+}
+
+.short-copy{
+    line-height: 180%;
+    width:70%;
+    margin-left: 13%;
+    margin-top: -6px;
+  
+}
+
+
+
+/* -------------------------------------------*
+Testimonials
+/*--------------------------------------------*/
+
+.customer-testimonials {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),  url(images/back-customers.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    color:#fff;  
+}
+
+
+blockquote{
+    padding:2%;
+    font-style:italic;
+    line-height: 145%;
+    position:relative;
+}
+
+cite{
+    
+    font-size:90%;
+    margin-top:25px;
+    display:block;
+    
+    
+}
+
+
+blockquote:before{
+    content:"\201C";
+    font-size:400%;
+    display:block;
+    position:absolute;
+    top:5px;
+    left:-3px;
+}
+cite img{
+    height:45px;
+    border-radius:50%;
+    margin-right:10px;
+    vertical-align: middle;
+        
+}
